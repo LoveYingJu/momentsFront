@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Instacram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script type="module" src="src/helpers.js"></script>
+    <script type="module" src="src/api.js"></script>
+</head>
+<body>
+<!-- This is an example app structure -->
+<header class='banner'>
+    <h1>Instacram</h1>
+    <ul class='nav'>
+        <li class="nav-item"><input type="file"/></li>
+        <li class='nav-item'>Icon</li>
+        <li class='nav-item'>Icon</li>
+    </ul>
+</header>
+<main role='main'>
+    <!-- app goes here -->
+
+    <div id="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-login">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="#" id="login-form-link">Login</a >
+                            </div>
+                            <div class="col-xs-6">
+                                <a href="#" id="register-form-link">Register</a >
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+
+                                <form id="login-form" action="" method="post" role="form" style="display: none;">
+                                    <div class="form-group">
+                                        <input type="text" name="username" id="username_login" tabindex="1" class="form-control" placeholder="Username" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="password" id="password_login" tabindex="2" class="form-control" placeholder="Password">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-sm-offset-3" id = 'login_error'>
+                                                <input type="text" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+
+
+                                <form id="register-form" action="" method="post" role="form" style="display: block;">
+                                    <div class="form-group">
+                                        <input type="text" name="username" id="username_re" tabindex="1" class="form-control" placeholder="Username" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email_re" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="password" id="password_re" tabindex="2" class="form-control" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="name" id="name_re" tabindex="2" class="form-control" placeholder="Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-sm-offset-3" id = 'register_error'>
+                                                <input type="text" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id='large-feed'>
+        <!-- inject feed data -->
+    </div>
+</main>
+<footer>
+    <p>Instacram example</p >
+</footer>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
